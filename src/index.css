@@ -1,0 +1,9 @@
+@import "tailwindcss" source(".");
+@plugin "@tailwindcss/forms";
+
+@theme { --color-taskbar: #D6D8DC; }
+
+@keyframes pulse-opacity {
+    0%, 100% { opacity: 0.2; }
+    50%       { opacity: 0.8; }
+}
