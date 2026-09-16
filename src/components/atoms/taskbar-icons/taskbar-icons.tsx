@@ -26,7 +26,7 @@ const TaskbarIcons = ({ id, name }: TaskbarIconsProps) => {
 
     return (
         <div
-            className={`taskbar-icon flex items-center border-b-blue-500 border-b-2 px-3 h-10 hover:bg-white/30 transition duration-100 select-none
+            className={`taskbar-icon flex items-center border-b-blue-500 border-b-2 px-3 h-10 hover:bg-white/30 cursor-pointer transition duration-100 select-none
             ${isFocused && !isMinimized ? 'bg-white/30' : ''}`}
             onClick={handleClick}>
             <img src={metaData.icon} className="w-6 h-6" alt={metaData.title} />

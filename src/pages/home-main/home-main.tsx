@@ -127,8 +127,8 @@ useEffect(() => {
       <div 
       className="home-main-background absolute top-0 left-0 w-full h-full grid grid-cols-15 auto-rows-min items-start pt-4 z-10"
       style={{ backgroundImage: "url('/images/home-background.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
-          <DesktopIcon name="About" onDoubleClick={() => openWindow("About")} />
-          <DesktopIcon name="Portfolio" startingRow={2} onDoubleClick={() => openWindow("Portfolio")} />
+          <DesktopIcon name="About" openWindow={() => openWindow("About")} />
+          <DesktopIcon name="Portfolio" startingRow={2} openWindow={() => openWindow("Portfolio")} />
         </div>
 
         {Object.entries(windows).map(([id, window]) => (

@@ -67,7 +67,7 @@ const ExplorerWindow = ({ id, name, children, onClose, offset }: ExplorerWindowP
             : { top: `${currentPosition.current.top}%`, left: `${currentPosition.current.left}%` }
             }
             className={`explorer-wrapper absolute flex flex-col
-                ${isMaximized ? 'w-full h-[calc(100%-2.5rem+1px)]' : 'w-1/2 h-2/3'}
+                ${isMaximized ? 'w-full h-[calc(100%-2.5rem+1px)]' : 'w-1/2 h-2/3 min-w-[700px]'}
                 ${isMinimized ? 'hidden' : ''}
             `}>
             <div className={`explorer-window bg-white border border-black shadow-lg w-full h-full flex flex-col`}>

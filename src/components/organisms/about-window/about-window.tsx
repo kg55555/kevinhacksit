@@ -42,11 +42,13 @@ const AboutWindow = ({windowType}: ProjectWindowProps) => {
                     <span className="uppercase tracking-wide">Experience</span>
                     <span className="text-sm">2+ Years</span>
                     <span className="text-sm text-gray-500">Web & Software Development</span>
+                    <span className="text-sm">5 Years</span>
+                    <span className="text-sm text-gray-500">Retail & Telecom Sales</span>
                 </div>
                 <div className="flex flex-col space-y-1">
                     <span className="uppercase tracking-wide">Currently</span>
                     <span className="text-sm">Open to Work</span>
-                    <span className="text-sm text-gray-500">Full Stack / Frontend Roles</span>
+                    <span className="text-sm text-gray-500">Full Stack / DevOps Roles</span>
                 </div>
                 <div className="flex flex-col space-y-1">
                     <span className="uppercase tracking-wide">Based In</span>
@@ -67,7 +69,7 @@ const AboutWindow = ({windowType}: ProjectWindowProps) => {
             <div className="p-6 border-b border-black/10">
                 <span className="uppercase tracking-wide">Languages</span>
                 <div className="flex flex-wrap gap-2 mt-2">
-                    {["TypeScript", "JavaScript", "Python", "C#", "Java", "SQL"].map(language => (
+                    {["TypeScript", "JavaScript", "Python", "SQL","C#", "Java"].map(language => (
                         <ProjectTags key={language} tagType={language} />
                     ))}
                 </div>
@@ -77,7 +79,7 @@ const AboutWindow = ({windowType}: ProjectWindowProps) => {
             <div className="p-6 border-b border-black/10">
                 <span className="uppercase tracking-wide">Technologies</span>
                 <div className="flex flex-wrap gap-2 mt-2">
-                    {["React", "TailwindCSS", "Node.js", "MongoDB", "Firebase", "PostgreSQL", "Jira", "Jest", "Docker", "Git", "Figma"].map(skill => (
+                    {["React", "TailwindCSS", "Node.js", "MongoDB", "Firebase", "PostgreSQL", "Jira", "Jest", "Docker", "Git", "Figma", "Docker", "Kubernetes"].map(skill => (
                         <ProjectTags key={skill} tagType={skill} />
                     ))}
                 </div>

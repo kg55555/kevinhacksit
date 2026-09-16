@@ -4,10 +4,10 @@ interface DesktopIconProps {
   name: keyof typeof windowMetadata;
   startingRow?: number;
   startingCol?: number;
-  onDoubleClick?: () => void;
+  openWindow?: () => void;
 }
 
-const DesktopIcon = ({ name, startingRow, startingCol, onDoubleClick }: DesktopIconProps) => {
+const DesktopIcon = ({ name, startingRow, startingCol, openWindow: onClick }: DesktopIconProps) => {
   const iconSrc = windowMetadata[name].icon;
 
   const gridStyle: React.CSSProperties = {
@@ -18,7 +18,7 @@ const DesktopIcon = ({ name, startingRow, startingCol, onDoubleClick }: DesktopI
   return (
   <div
       style={gridStyle}
-      onDoubleClick={onDoubleClick}
+      onClick={onClick}
       className="desktop-icon flex flex-col items-center justify-center cursor-pointer select-none
           w-20 h-20 xl:w-28 xl:h-28
           hover:bg-white/30 hover:border-white/40 border-transparent border-2 rounded transition duration-100

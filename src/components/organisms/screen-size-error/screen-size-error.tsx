@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
 const ScreenSizeError = () => {
-    const [isTooSmall, setIsTooSmall] = useState(window.innerWidth < 1280 || window.innerHeight < 720);
+    const [isTooSmall, setIsTooSmall] = useState(window.innerWidth < 800 || window.innerHeight < 720);
     const [width, setWidth] = useState(window.innerWidth);
     const [height, setHeight] = useState(window.innerHeight);
 
 
     useEffect(() => {
         const handleResize = () => {
-            setIsTooSmall(window.innerWidth < 1280 || window.innerHeight < 720);
+            setIsTooSmall(window.innerWidth < 800 || window.innerHeight < 720);
             setWidth(window.innerWidth);
             setHeight(window.innerHeight);
         };
@@ -31,7 +31,7 @@ const ScreenSizeError = () => {
 
                 <p className="text-white/80 text-xs sm:text-sm leading-relaxed">
                     This application is designed for desktop and requires a minimum width of{" "}
-                    <strong className="text-white">1280px</strong> to display correctly.
+                    <strong className="text-white">800px</strong> and height of <strong className="text-white">720px</strong> to display correctly.
                     Please switch to a larger display or rotate your device to landscape.
                 </p>
 
@@ -45,11 +45,11 @@ const ScreenSizeError = () => {
                     <div className="w-full h-1 bg-white/20 rounded-full overflow-hidden">
                         <div
                             className="h-full bg-white rounded-full transition-all duration-300"
-                            style={{ width: `${Math.min((width / 1280) * 100, 100)}%` }}
+                            style={{ width: `${Math.min((width / 800) * 100, 100)}%` }}
                         />
                     </div>
                     <p className="text-white/60 text-xs">
-                        {Math.min(Math.round((width / 1280) * 100), 100)}% of required width
+                        {Math.min(Math.round((width / 800) * 100), 100)}% of required width
                     </p>
                 </div>
 
